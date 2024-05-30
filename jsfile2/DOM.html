@@ -1,0 +1,210 @@
+<!--document.form.name.value-->
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title>simple html code</title>
+        </head>
+        <body>
+            <h1>DOM METHODS</h1>
+            <script type="text/javascript">  
+                function printvalue(){  
+                var name=document.form1.name.value;  
+                alert("Welcome: "+name);  
+                }  
+                </script>  
+                <form name="form1">  
+                Enter Name:<input type="text" name="name"/>  
+                <input type="button" onclick="printvalue()" value="print name"/>  
+                </form>  
+            </body>
+</html>   -->
+
+<!--getElementById-->
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title>simple html code</title>
+        </head>
+        <body>
+            <h1>DOM METHODS</h1>
+            <script type="text/javascript">  
+                function getcube(){  
+                var number=document.getElementById("number").value;  
+                alert(number*number*number);  
+                }  
+                </script>  
+                <form>  
+                Enter No:<input type="text" id="number" name="number"/>
+                <input type="button" value="cube" onclick="getcube()"/>  
+                </form>  
+            </body>
+</html> -->
+
+<!--getElementByClassName-->
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title>simple html code</title>
+        </head>
+        <body>
+            <h1>DOM METHODS</h1>
+            <script type="text/javascript">  
+                var x=document.getElementsByClassName('Class');  
+                document.write("On calling x, it will return an arrsy-like object: "+x);  
+                </script>  
+            </body>
+</html> -->
+
+<!--getElementByName-->
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title>simple html code</title>
+        </head>
+        <body>
+            <h1>DOM METHODS</h1>
+            <script type="text/javascript">  
+                function totalelements()  
+                {  
+                var allgenders=document.getElementsByName("gender");  
+                alert("Total Genders:"+allgenders.length);  
+                }  
+                </script>  
+                <form>  
+                Male:<input type="radio" name="gender" value="male">  
+                Female:<input type="radio" name="gender" value="female">  
+                  
+                <input type="button" onclick="totalelements()" value="Total Genders">  
+                </form>  
+            </body>
+</html> -->
+
+<!--getElementByTagName-->
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title>simple html code</title>
+        </head>
+        <body>
+            <h1>DOM METHODS</h1>
+            <script type="text/javascript">  
+                function countpara(){  
+                var totalpara=document.getElementsByTagName("p");  
+                alert("total p tags are: "+totalpara.length);  
+                  }  
+                </script>  
+                <p>This is a pragraph</p>  
+                <p>Here we are going to count total number of paragraphs by getElementByTagName() method.</p>  
+                <p>Let's see the simple example</p>  
+                <button onclick="countpara()">count paragraph</button>  
+            </body>
+</html> -->
+
+<!--inner Html Element-->
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title>simple html code</title>
+        </head>
+        <body>
+            <h1>DOM METHODS</h1>
+            <script type="text/javascript" >  
+                function showcommentform() {  
+                var data="Name:<input type='text' name='name'><br>Comment:<br><textarea rows='5' cols='80'></textarea><br><input type='submit' value='Post Comment'>";  
+                document.getElementById('mylocation').innerHTML=data;  
+                }  
+                </script>  
+                <form name="myForm">  
+                <input type="button" value="comment" onclick="showcommentform()">  
+                <div id="mylocation"></div>  
+                </form>  
+            
+            </body>
+</html> -->
+
+<!--inner text property-->
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title>simple html code</title>
+        </head>
+        <body>
+            <h1>DOM METHODS</h1>
+            <script type="text/javascript" >  
+                function validate() {  
+                var msg;  
+                if(document.myForm.userPass.value.length>5){  
+                msg="good";  
+                }  
+                else{  
+                msg="poor";  
+                }  
+                document.getElementById('mylocation').innerText=msg;  
+                 }  
+                   </script>  
+                <form name="myForm">  
+                <input type="password" value="" name="userPass" onkeyup="validate()">  
+                Strength:<span id="mylocation">no strength</span>  
+                </form>  
+            </body>
+</html> -->
+
+<!--form validation-->
+ <!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title>simple html code</title>
+        </head>
+        <body>
+            <h1>DOM METHODS</h1>
+            <script>  
+                function validateform(){  
+                var name=document.myform.name.value;  
+                var password=document.myform.password.value;  
+                  
+                if (name==null || name==""){  
+                  alert("Name can't be blank");  
+                  return false;  
+                }else if(password.length<6){  
+                  alert("Password must be at least 6 characters long.");  
+                  return false;  
+                  }  
+                }  
+                </script>   
+                <form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()" >  
+                Name: <input type="text" name="name"><br/>  
+                Password: <input type="password" name="password"><br/>  
+                <input type="submit" value="register">  
+                </form>  
+            </body>
+</html>  -->
+
+<!--mail validation-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>simple html code</title>
+        </head>
+        <body>
+            <h1>DOM METHODS</h1>
+            <script>  
+                function validateemail()  
+                {  
+                var x=document.myform.email.value;  
+                var atposition=x.indexOf("@");  
+                var dotposition=x.lastIndexOf(".");  
+                if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+                  alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+                  return false;  
+                  }  
+                }  
+                </script>   
+                <form name="myform"  method="post" action="#" onsubmit="return validateemail();">  
+                Email: <input type="text" name="email"><br/>  
+                  
+                <input type="submit" value="register">  
+                </form>  
+
+    </body>
+</html> 
+   

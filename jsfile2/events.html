@@ -1,0 +1,208 @@
+<!--click event-->
+<!-- <html>
+<head> Javascript Events </head>  
+<body>  
+<script language="Javascript" type="text/Javascript">  
+  
+    function clickevent()  
+    {  
+        document.write("This is JavaTpoint");  
+    }  
+      
+</script>  
+<form>  
+<input type="button" onclick="clickevent()" value="Who's this?"/>  
+</form>  
+</body>  
+</html>   -->
+
+<!--mouse event-->
+<!-- <html>  
+<head>   
+<h1> Javascript Events </h1>  
+</head>  
+<body>  
+<script language="Javascript" type="text/Javascript">  
+      
+    function mouseoverevent()  
+    {  
+        alert("This is JavaTpoint");  
+    }  
+ 
+</script>  
+<p onmouseover="mouseoverevent()"> Keep cursor over me</p>  
+</body>  
+</html> -->  
+
+<!--form event-->
+<!-- <html>  
+<head> Javascript Events</head>  
+<body>  
+<h2> Enter something here</h2>  
+<input type="text" id="input1" onfocus="focusevent()"/>  
+<script>  
+    function focusevent()  
+    {  
+        document.getElementById("input1").style.background=" aqua";  
+    }   
+</script>  
+</body>  
+</html>   -->
+
+<!--keydown event -->
+<!-- <html>  
+<head> Javascript Events</head>  
+<body>  
+<h2> Enter something here</h2>  
+<input type="text" id="input1" onkeydown="keydownevent()"/>  
+<script>  
+
+    function keydownevent()  
+    {  
+        document.getElementById("input1");  
+        alert("Pressed a key");  
+    }   
+</script>  
+</body>  
+</html>   -->
+
+<!--load event-->
+<!-- <html>  
+<head>Javascript Events</head>  
+</br>  
+<body onload="window.alert('Page successfully loaded');">  
+<script>   
+document.write("The page is loaded successfully");    
+</script>  
+</body>  
+</html> -->
+
+<!--adding multiple events-->
+<!-- <!DOCTYPE html>  
+<html>  
+<body>  
+<p> This is an example of adding multiple events of different type to the same element. </p>  
+<p> Click the following button to see the effect. </p>  
+<button id = "btn"> Click me </button>  
+<p id = "para"></p>  
+<script>  
+function fun() {  
+    btn.style.width = "50px";  
+    btn.style.height = "50px";  
+    btn.style.background = "yellow";  
+    btn.style.color = "blue";  
+}  
+   
+function fun1() {  
+   document.getElementById("para").innerHTML =  "This is second function";  
+  
+}  
+function fun2() {  
+    btn.style.width = "";  
+    btn.style.height = "";  
+    btn.style.background = "";  
+    btn.style.color = "";  
+}  
+var mybtn = document.getElementById("btn");  
+mybtn.addEventListener("mouseover", fun);  
+mybtn.addEventListener("click", fun1);  
+mybtn.addEventListener("mouseout", fun2);  
+</script>  
+</body>  
+</html>   -->
+
+<!--double click-->
+<!-- <!DOCTYPE html>  
+<html>  
+<head>  
+</head>  
+  
+<body>  
+<h1 id = "heading" ondblclick = "fun()"> Hello world :):) </h1>  
+<h2> Double Click the text "Hello world" to see the effect. </h2>  
+<p> This is an example of using the <b> ondblclick </b> attribute. </p>  
+<script>  
+function fun() {  
+document.getElementById("heading").innerHTML = " Welcome to the javaTpoint.com ";  
+}  
+</script>  
+</body>  
+</html>   -->
+
+<!--onload event-->
+<!-- <!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset = " utf-8">  
+<title> window.onload() </title>  
+<style type = "text/css">  
+#bg{  
+width: 200px;  
+height: 200px;  
+border: 4px solid blue;  
+}  
+</style>  
+<script type = "text/javascript">  
+window.onload = function(){  
+document.getElementById("bg").style.backgroundColor = "red";  
+document.getElementById("bg").style.width = "300px";  
+document.getElementById("bg").style.height = "300px";  
+}  
+</script>  
+</head>  
+<body>  
+<h2> This is an example of window.onload() </h2>  
+<div id = "bg"></div>  
+</body>  
+</html>   -->
+
+<!--onsize event-->
+<!-- <!DOCTYPE html>  
+<html>  
+<head>  
+<script>  
+var i = 0;  
+  
+function fun() {  
+var res = "Width = " + window.outerWidth + "<br>" + "Height = " + window.outerHeight; 
+
+document.getElementById("para").innerHTML = res;  
+  
+var res1 = i += 1;  
+document.getElementById("s1").innerHTML = res1;  
+}  
+</script>  
+</head>  
+<body onresize = "fun()">  
+<h3> This is an example of using onresize attribute. </h3>  
+<p> Try to resize the browser's window to see the effect. </p>  
+  
+<p id = "para"> </p>  
+<p> You have resized the window <span id = "s1"> 0 </span> times.</p>  
+</body>  
+</html>   -->
+ <!DOCTYPE html>  
+<html>  
+<head>  
+<script>  
+const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+const btn = document.getElementById("btn");
+const color = document.querySelector(".color");
+
+btn.addEventListener("click", function () {
+  let hexColor = "#";
+  for (let i = 0; i < 6; i++) {
+    hexColor += hex[getRandomNumber()];
+  }
+  // console.log(hexColor);
+
+  color.textContent = hexColor;
+  document.body.style.backgroundColor = hexColor;
+});
+
+function getRandomNumber() {
+  return Math.floor(Math.random() * hex.length);
+}
+</script>  
+</head>
+</html>  
